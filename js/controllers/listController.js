@@ -3,8 +3,10 @@
         .module("turtleFacts")
         .controller("listCtrl", ListController);
 
-    function ListController($scope) {
-        $scope.name = "App";
+    function ListController() {
+        var vm;
+        vm = this;
+        vm.name = "App";
 
     }
 
