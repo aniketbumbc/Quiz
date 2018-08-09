@@ -34,3 +34,12 @@
 .image-answer.bg-danger{
     border: 3px solid #b74848;
 }
+.well-image{
+width: 100%;
+height: 162px;
+}
+.top-buffer{
+margin-top:30px;
+margin-right: 1000px;
+margin-left: 10px;
+}
