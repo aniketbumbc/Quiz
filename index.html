@@ -20,9 +20,17 @@
         </div>
 
         <div ng-controller=" listCtrl as list">
+            <form class = "form inline well well-sm clearfix">
+                <span class =".glphyicon glphyicon-search">
+                    <input type="text" placeholder="Search....." class="form-control"
+                    ng-model="list.search"
+                    >
+
+                </span>
+            </form>
             <h3>{{list.name}}</h3>
             <div class="row">
-                <div class="col-sm-6" ng-repeat="turtle in list.data">
+                <div class="col-sm-6" ng-repeat="turtle in list.data | filter:list.search">
                     <div class="well well-sm">
                         <div class="row">
                             <div class="col-md-6">
@@ -60,7 +68,7 @@
                     </div>
 
                     <div class="row top-buffer">
-                        <div class="col-md-6  top-buffer">
+                        <div class=" col-xs-12 top-buffer">
                             <p>
                                 <strong>Locations:</strong>{{list.activeTurtle.location}}</p>
                             <p>
@@ -69,8 +77,7 @@
                                 <strong>Lifespan:</strong>{{list.activeTurtle.lifespan}}</p>
                             <p>
                                 <strong>Diet:</strong>{{list.activeTurtle.diet}}</p>
-                                </div>
-                            
+                                </div>                            
                         </div>
                             <div class=" col-xs-12 top-buffer">
                                 <p>
