@@ -19,13 +19,16 @@
             </h3>
         </div>
 
-        <div ng-controller=" listCtrl as list">
-            <form class = "form inline well well-sm clearfix">
+        <div ng-controller=" listCtrl as list" ng-hide="list.quizeActive">
+            <form class = "form-inline well well-sm clearfix">
                 <span class =".glphyicon glphyicon-search">
                     <input type="text" placeholder="Search....." class="form-control"
-                    ng-model="list.search"
-                    >
+                    ng-model="list.search">
 
+                    <button class="btn btn-warning pull-right" 
+                    ng-click="list.activateQuiz()">
+                        <strong> Start Quiz </strong>
+                    </button>
                 </span>
             </form>
             <h3>{{list.name}}</h3>

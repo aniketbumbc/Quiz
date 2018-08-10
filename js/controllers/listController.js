@@ -10,13 +10,18 @@
         vm.data = turtlesData;
         vm.activeTurtle = {};
         vm.changeActiveTrutle = changeActiveTrutle;
+        vm.activateQuiz = activateQuiz;
         vm.search = "";
+        vm.quizeActive = false;   //flag implemented
 
         function changeActiveTrutle(index){
-            console.log("test");
-
-debugger;
             vm.activeTurtle = index;
+        }
+
+        function activateQuiz(){
+            console.log("Test Method");
+            debugger;
+            vm.quizeActive = true;
         }
 
     }
