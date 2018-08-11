@@ -2,7 +2,6 @@
     angular.module("turtleFacts").
     factory("DataService", DataFactory);
 
-
     function DataFactory() {
         var dataObj = {
             turtlesData: turtlesData,
@@ -13,6 +12,44 @@
     }
 
     var quizeQuestions = [{
+            type: "text",
+            text: "How much weight ?",
+            PossibleAnwers: [{
+                    answer: " Upt to 20Kg"
+                },
+                {
+                    answer: " Upt to 30Kg"
+                },
+                {
+                    answer: " Upt to 40Kg"
+                },
+                {
+                    answer: " Upt to 10Kg"
+                },
+            ],
+            selected: null,
+            corrected: null
+        },
+        {
+            type: "text",
+            text: "How much weight ?",
+            PossibleAnwers: [{
+                    answer: " Upt to 20Kg"
+                },
+                {
+                    answer: " Upt to 30Kg"
+                },
+                {
+                    answer: " Upt to 40Kg"
+                },
+                {
+                    answer: " Upt to 10Kg"
+                },
+            ],
+            selected: null,
+            corrected: null
+        },
+        {
             type: "text",
             text: "How much weight ?",
             PossibleAnwers: [{

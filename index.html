@@ -94,7 +94,43 @@
          <!--List Controller-->
 
         <div ng-controller="quizCtrl as quiz" ng-show="quiz.quizMatricService.quizeActive">
-            <h1> Quiz Here</h1>
+            <h3> Quiz Start Here</h3>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <h2>Progress:</h2>
+                    <div class="btn-toolbar">
+                        <button  class="btn" ng-repeat="question in quiz.DataService.quizeQuestions" 
+                        ng-class ="{'btn-info':question.selected !== null, 'btn-danger':question.selected === null}">
+                    
+                    <span class="glyphicon"                    
+                    ng-class="{'glyphicon-pencil':question.selected !== null,'	glyphicon glyphicon-question-sign': question.selected === null}">
+                    </span>                  
+                     </button>
+                    </div>
+                </div>
+
+                <div class="clo-xs-4">
+                    <div class="row">
+                        <h4>Legend:</h4>
+                        <div class="col-sm-2">
+                            <button class="btn btn-info">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            <p>Answered</p>
+                        </div>
+                        <div class="col-sm-0">
+                            <button class="btn btn-danger">
+                                <span class="glyphicon glyphicon-question-sign"></span>
+                            </button>
+                            <p>Unanswered</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
 
         </div>
 

@@ -10,7 +10,8 @@
         vm = this;
         vm.quizMatricService = quizMatricService;
         vm.name = "App";
-        vm.data = DataService.turtlesData;
+        debugger;
+        vm.data = DataService.turtlesData;  // accessing data from data service
         vm.activeTurtle = {};
         vm.changeActiveTrutle = changeActiveTrutle;
         vm.activateQuiz = activateQuiz;
