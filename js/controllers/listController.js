@@ -3,16 +3,19 @@
         .module("turtleFacts")
         .controller("listCtrl", ListController);
 
-    function ListController() {
-        var vm;
+        ListController.$inject = ['quizMatricService'];  // injecting services 
+
+    function ListController(quizMatricService) {
+        var vm;     
         vm = this;
+        vm.quizMatricService = quizMatricService;
         vm.name = "App";
         vm.data = turtlesData;
         vm.activeTurtle = {};
         vm.changeActiveTrutle = changeActiveTrutle;
         vm.activateQuiz = activateQuiz;
         vm.search = "";
-        vm.quizeActive = false;   //flag implemented
+       // vm.quizeActive = false;   //flag implemented
 
         function changeActiveTrutle(index){
             vm.activeTurtle = index;
@@ -21,7 +24,8 @@
         function activateQuiz(){
             console.log("Test Method");
             debugger;
-            vm.quizeActive = true;
+            //vm.quizeActive = true;
+            quizMatricService.changeState(true);
         }
 
     }

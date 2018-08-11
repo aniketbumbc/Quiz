@@ -3,6 +3,17 @@
 
     function QuizMatrics(){
 
+        var quizObj ={
+            quizeActive : false,  
+            changeState : changeState
+        };
+
+        return quizObj;
+
+        function changeState (state){
+            quizObj.quizeActive = state;
+
+        }
     }
 
 })();
