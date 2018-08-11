@@ -2,9 +2,9 @@
 
 angular.module("turtleFacts").controller("quizCtrl",QuizController);
 
-QuizController.$inject = ['quizMatricService'];
+QuizController.$inject = ['quizMatricService' ,'DataService'];
 
-function QuizController(quizMatricService){
+function QuizController(quizMatricService,DataService){
     var vm = this;
     vm.quizMatricService = quizMatricService;  // accessing serive in controller 
 
