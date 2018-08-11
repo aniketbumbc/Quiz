@@ -8,6 +8,12 @@ function QuizController(quizMatricService,DataService){
     var vm = this;
     vm.quizMatricService = quizMatricService;  // accessing serive in controller 
     vm.DataService = DataService;
+    vm.activeQuestion = 0; // flag set 
+    vm.questionAnwsered = questionAnwsered;
+
+    function questionAnwsered(){
+        alert("hello");
+    }
 
 }
 

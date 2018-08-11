@@ -5,13 +5,13 @@
     function DataFactory() {
         var dataObj = {
             turtlesData: turtlesData,
-            quizeQuestions:quizeQuestions
+            quizQuestions:quizQuestions
         };
 
         return dataObj;
     }
 
-    var quizeQuestions = [{
+    var quizQuestions = [{
             type: "text",
             text: "How much weight ?",
             PossibleAnwers: [{
