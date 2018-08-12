@@ -185,12 +185,12 @@
     ]
 
     var turtlesData = [{
-            type: "Green Turtle",
-            location: "Tropical and subtropical",
-            size: "Upto 1.5m to 300kg",
-            lifespan: "Over 80 years",
-            diet: "veg",
-            description: "Turtles are reptiles that have been around for more than 200 million years. In fact, fossils from the dinosaur age show that turtles today look pretty much the same as they did way back then."
+                type: "Green Turtle",
+                location: "Tropical and subtropical",
+                size: "Upto 1.5m to 300kg",
+                lifespan: "Over 80 years",
+                diet: "veg",
+                description: "Turtles are reptiles that have been around for more than 200 million years. In fact, fossils from the dinosaur age show that turtles today look pretty much the same as they did way back then."
 
         },
         {
