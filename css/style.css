@@ -53,3 +53,15 @@ margin-left: 10px;
   
     background-color: #b74848;
 }
+.img-anw{
+    cursor: pointer;
+    height: 100;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.img-anw img{
+    width: 100%;
+    height: auto;
+}
