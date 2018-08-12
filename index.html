@@ -141,7 +141,10 @@
                               quiz.DataService.quizQuestions[quiz.activeQuestion].type === 'text'">
                                   <div class="col-sm-6" ng-repeat="anwser  in 
                                   quiz.DataService.quizQuestions[quiz.activeQuestion].PossibleAnwers">
-                                 <h5 class ="anw">  {{anwser.answer}} </h5>
+                                 <h5 class ="anw" ng-class="{'bg-info':$index ===
+                                 quiz.DataService.quizQuestions[quiz.activeQuestion.selected]}"
+                                 ng-click="quiz.selectAnwser($index)">  
+                                 {{anwser.answer}} </h5>
                                   </div>
                               </div>
                               <div class="row" ng-if ="

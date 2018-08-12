@@ -11,6 +11,7 @@ function QuizController(quizMatricService,DataService){
     vm.activeQuestion = 0; // flag set 
     vm.questionAnwsered = questionAnwsered;
     vm.setActiveQuestion = setActiveQuestion;
+    vm.selectAnwser= selectAnwser;
 
     var numQuestionAnwserd = 0;
 
@@ -28,9 +29,6 @@ function QuizController(quizMatricService,DataService){
       
     }
 
-
-
-
     function questionAnwsered(){
         var quizLength = DataService.quizQuestions.length;
        // alert("hello");
@@ -43,6 +41,11 @@ function QuizController(quizMatricService,DataService){
             }           
           }
           vm.setActiveQuestion();
+    }
+    
+    function selectAnwser(index){
+
+        DataService.quizQuestions[vm.activeQuestion].selected = index;
     }
 
 }
