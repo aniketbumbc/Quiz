@@ -12,7 +12,7 @@
         vm.questionAnwsered = questionAnwsered;
         vm.setActiveQuestion = setActiveQuestion;
         vm.selectAnwser = selectAnwser;
-        vm.error = false;  // flag declare for error
+        vm.error = false; // flag declare for error
         var numQuestionAnwserd = 0;
         vm.finalise = false;
 
@@ -25,11 +25,11 @@
 
                 while (!breakOut) {
                     vm.activeQuestion = vm.activeQuestion < quizLength ? ++vm.activeQuestion : 0; // check next question if not next question then 0 
-                    
-                    if(vm.activeQuestion === 0){
+
+                    if (vm.activeQuestion === 0) {
                         vm.error = true;
                     }
-                    
+
 
                     if (DataService.quizQuestions[vm.activeQuestion].selected === null) {
                         breakOut = true; // found next unanwerd question
@@ -49,8 +49,8 @@
                 numQuestionAnwserd++;
                 if (numQuestionAnwserd >= quizLength) {
                     //finalize quiz
-                    for(var i =0; i<quizLength; i++){
-                        if(DataService.quizQuestions[i].selected === null){
+                    for (var i = 0; i < quizLength; i++) {
+                        if (DataService.quizQuestions[i].selected === null) {
                             setActiveQuestion(i);
                             return;
                         }
