@@ -26,7 +26,7 @@
             console.log("Test Method");
             debugger;
             //vm.quizeActive = true;
-            quizMatricService.changeState(true);
+            quizMatricService.changeState("quiz",true);
         }
 
     }

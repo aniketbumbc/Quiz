@@ -5,11 +5,14 @@
     function DataFactory() {
         var dataObj = {
             turtlesData: turtlesData,
-            quizQuestions: quizQuestions
+            quizQuestions: quizQuestions,
+            correctAnwsers:correctAnwsers
         };
 
         return dataObj;
     }
+
+    var correctAnwsers = [1,2,3,0,3,3,2,1,0];
 
     var quizQuestions = [{
             type: "text",

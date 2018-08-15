@@ -134,7 +134,7 @@
                     <button class="close" ng-click="quiz.error = false">&times;</button>
                 </div>
                 <h3>Questions: </h3>
-                <div class="well well-sm">
+                <div class="well well-sm" ng-hide="quiz.finalise">
                     <div class="row">
                         <div class="col-xs-12">
                             <h4>{{quiz.activeQuestion+1 + " . " + quiz.DataService.quizQuestions [quiz.activeQuestion].text}}

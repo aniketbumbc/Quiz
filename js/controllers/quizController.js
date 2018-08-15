@@ -15,6 +15,7 @@
         vm.error = false; // flag declare for error
         var numQuestionAnwserd = 0;
         vm.finalise = false;
+        vm.finaliseAnswers = finaliseAnswers;
 
 
         function setActiveQuestion(index) {
@@ -66,6 +67,16 @@
         function selectAnwser(index) {
 
             DataService.quizQuestions[vm.activeQuestion].selected = index;
+        }
+
+
+        function finaliseAnswers(){
+            vm.finalise = false;
+            numQuestionAnwserd = 0;
+            vm.activeQuestion = 0;
+            quizMatricService.markQuiz();
+            quizMatricService.changeState("quiz",false);
+            quizMatricService.changeState("result",true);
         }
 
     }
