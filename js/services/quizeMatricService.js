@@ -7,7 +7,7 @@
 
         var quizObj ={
             quizeActive : false,
-            resultActive:false,  
+            resultActive: false,  
             changeState : changeState,           
             correctAnwsers:[],
             markQuiz:markQuiz,
@@ -22,10 +22,10 @@
                 quizObj.quizeActive = state;
             }else if(metric === 'result'){
                 quizObj.resultActive = state;
+                console.log("hello");
             }else{
                 return false;
             }          
-
         }
 
         function markQuiz(){
