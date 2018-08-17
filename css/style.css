@@ -82,3 +82,9 @@
 .img-select {
     border:3px,solid red;
 }
+.img-anw .bg-success{
+    border:3px solid green;
+}
+.img-anw .bg-danger{
+    border:3px solid red;
+}
