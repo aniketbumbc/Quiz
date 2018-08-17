@@ -8,18 +8,26 @@
     function ResultsController(quizMatricService,DataService){
   
        var vm = this;
-       debugger;
+  
        vm.name = "aniket";
         vm.quizMatricService = quizMatricService;
         vm.DataService = DataService;       
         vm.getAnwersClass = getAnwersClass;
         vm.setActiveQuestion = setActiveQuestion;
+        vm.calculatePercentage = calculatePercentage;
         vm.activeQuestion = 0;
 
         function setActiveQuestion(index){
             vm.activeQuestion = index; 
 
         }
+
+        function calculatePercentage(){
+            debugger;          
+            return Math.round(quizMatricService.numCorrect / DataService.quizQuestions.length * 100);
+        }      
+
+            
 
 
 

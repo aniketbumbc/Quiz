@@ -9,8 +9,7 @@
         var vm;
         vm = this;
         vm.quizMatricService = quizMatricService;
-        vm.name = "App";
-        debugger;
+        vm.name = "App";   
         vm.data = DataService.turtlesData; // accessing data from data service
         vm.activeTurtle = {};
         vm.changeActiveTrutle = changeActiveTrutle;
@@ -23,8 +22,7 @@
         }
 
         function activateQuiz() {
-            console.log("Test Method");
-            debugger;
+            console.log("Test Method");       
             //vm.quizeActive = true;
             quizMatricService.changeState("quiz",true);
         }
