@@ -15,6 +15,7 @@
         vm.getAnwersClass = getAnwersClass;
         vm.setActiveQuestion = setActiveQuestion;
         vm.calculatePercentage = calculatePercentage;
+        vm.backButton= backButton;
         vm.activeQuestion = 0;
 
         function setActiveQuestion(index){
@@ -27,10 +28,16 @@
             return Math.round(quizMatricService.numCorrect / DataService.quizQuestions.length * 100);
         }      
 
-            
+        function backButton(){
+         quizMatricService.changeState("result",false);
+         quizMatricService.numCorrect = 0;
+         for(var i=0;i<=DataService.quizQuestions.length;i++){
+             var data = DataService.quizQuestions[i];
+             data.selected = null;
+             data.correctAnwsers = null;
+         }
 
-
-
+        } 
 
         function  getAnwersClass(index){    // ng- class implemention
 

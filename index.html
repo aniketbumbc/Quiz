@@ -150,7 +150,7 @@
                             </div>
 
                             <div class="row" ng-if="
-                              quiz.DataService.quizQuestions[quiz.activeQuestion].type === 'image'">
+                              quiz.DataService.quizQuestions[quiz.activeQuestion].type ==='image'">
                                 <div class="col-sm-6" ng-repeat="anwser  in 
                                   quiz.DataService.quizQuestions[quiz.activeQuestion].PossibleAnwers">
                                     <div class="img-anw" ng-class="{'img-select':$index ===
@@ -233,7 +233,7 @@
                     <div class="row" ng-if="results.DataService.quizQuestions[results.activeQuestion].type === 'text'">
                         <div class="col-sm-6" ng-repeat="anwser  in 
                         results.DataService.quizQuestions[results.activeQuestion].PossibleAnwers">
-                            <h4 class="anw" ng-class="results.getAnwersClass($index)">
+                            <h4 class="anw" ng-class="results.getAnwersClass($ )">
                                 {{anwser.answer}} 
                                 <p class="pull-right" ng-show="$index !== results.quizeMatricService.correctAnwsers[results.activeQuestion]
                                 && $index === results.DataService.quizQuestions[results.activeQuestion].selected">
@@ -245,16 +245,17 @@
                         </div>
                     </div>
 
-                    <div class="row" ng-if="
-                    results.DataService.quizQuestions[results.activeQuestion].type === 'image'">
+                    <div class="row" ng-if="true">
                         <div class="col-sm-6" ng-repeat="anwser in 
                           results.DataService.quizQuestions[quiz.activeQuestion].PossibleAnwers">
                             <div class="img-anw" ng-class="results.getAnwersClass($index)">
-                                <h2>hello</h2>
-                                <img src="./img/trtule 1.jpg">
+                                <div class="col-xs-8 col xs-offset-2 top-buffer">
+                                    <img src="./img/trtule 1.jpg" class="img-rounded img-responsive well-image">
+                                </div>
                             </div> 
                         </div>
                     </div>
+                    <button class="btn btn-primary" ng-click="results.backButton()">Back to Fact</button>
                 </div>
             </div>
 
